@@ -1,0 +1,605 @@
+#mojo-scene-beer-search-scene-scroller,
+#mojo-scene-beer-info-scene-scroller,
+#mojo-scene-brewery-info-scene-scroller,
+#mojo-scene-checkin-scene-scroller,
+#mojo-scene-checkin-result-scene-scroller,
+#mojo-scene-venue-search-scene-scroller,
+#mojo-scene-user-info-scene-scroller,
+#mojo-scene-feed-scene-scroller,
+#mojo-scene-view-checkin-scene-scroller,
+#mojo-scene-login-scene-scroller {
+	background: url(../images/background.png) repeat fixed left top;
+}
+
+.scene-wrapper {
+	padding-bottom: 50px;
+}
+
+.logo {
+	margin: 0 auto;
+}
+
+
+/***boxes*****/
+.border-top {
+	width: 292px;
+	height: 27px;
+	background: url(../images/border-top.png) no-repeat left top;
+	margin-bottom: 0;
+	padding-top: 25px;
+	padding-left: 8px;
+	color: #fff;
+	font-weight: bold;
+}
+.border-middle {
+	width: 288px;
+	background: url(../images/border-middle.png) repeat-y left top;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 2px 6px 2px 6px;
+	color: #322814;
+}
+.border-bottom {
+	width: 300px;
+	height: 14px;
+	margin-top: 0;
+	background: url(../images/border-bottom.png) no-repeat left top;
+}
+
+/****end boxes***/
+
+/*****buttons*****/
+.growlr-button {
+	width: 95%;
+	margin: 0 auto;
+}
+.growlr-button .palm-button {
+  -webkit-border-image: url(../images/palm-button-medium.png) 0 17 104 17 repeat repeat !important;
+  margin: 0;
+}
+
+.growlr-button .palm-button.selected.primary,
+.growlr-button .palm-button.selected {
+  -webkit-border-image: url(../images/palm-button-medium.png) 52 17 52 17 repeat repeat !important;
+}
+
+.growlr-button .palm-button.disabled.primary,
+.growlr-button .palm-button.disabled {
+  -webkit-border-image: url(../images/palm-button-medium.png) 104 17 0 17 repeat repeat !important;
+}
+
+
+.growlr-button .palm-button-wrapper {
+  position: relative;
+}
+
+.growlr-button .palm-button-wrapper .activity-spinner {
+  position: absolute;
+  right: 5px;
+}
+/***end butons*****/
+
+
+#login-fields,
+#info-fields,
+#result-fields,
+#badge-fields,
+#rec-fields,
+#checkin-fields,
+#foursquare-fields,
+#search-fields {
+	margin: 10px auto;
+	width: 300px;
+}
+
+.beer-category {
+	width: 32px;
+	float: left;
+	padding-right: 3px;
+}
+.beer-cat-icon {
+
+}
+.beer-info-wrap {
+	width: 260px;
+	padding-right: 5px;
+	float: left;
+	padding-bottom: 5px;
+	padding-left: 3px;
+}
+
+.beer-info-wrap-thin {
+	width: 230px;
+	padding-right: 5px;
+	float: left;
+	padding-bottom: 5px;
+	padding-left: 3px;
+}
+.beer-name {
+	color: #9e7f44;
+	font-size: 16px;
+	font-weight: bold;
+}
+.beer-brewery {
+	font-size: 14px;
+	color: #9b4d08;
+	height: 18px;
+}
+.beer-shout {
+	font-size: 15px;
+	color: #ccc;
+	margin-top: 5px;
+}
+.beer-brewery-big {
+	font-size: 16px;
+	color: #9e7f44;
+}
+
+.breaker {
+	clear: both;
+	height: 1px;
+	font-size: 1px;
+}
+
+.badge-left {
+	width: 80px;
+	float: left;
+}
+.badge-left img {
+	width: 80px;
+}
+.badge-right {
+	width: 198px;
+	float: right;
+}
+
+.beer-info-wrapper,.badge-wrapper {
+	width: 100%;
+}
+
+#beer-image, #user-image {
+	display: block;
+}
+
+#beer-info-left {
+	width: 48px;
+	float: left;
+	text-align: center;
+}
+#beer-info-right {
+	width: 230px;
+	float: right;
+}
+
+#beer-info-left-small {
+	width: 30px;
+	float: left;
+	text-align: center;
+}
+#beer-info-right-wide {
+	width: 248px;
+	float: right;
+}
+
+
+#beer-abv {
+	font-family: serif;
+	font-size: 17px;
+	width: 100%;
+	text-align: center;
+}
+
+#abv {
+	font-size: 12px;
+	width: 100%;
+	text-align: center;
+}
+
+#beer-name, #user-name {
+	font-weight: bold;
+	font-size: 16px;
+}
+#beer-brewery, #user-location {
+	font-size: 14px;
+}
+#beer-brewery {
+	line-height: 15px;
+	height: 15px;
+	padding: 1px;
+	border-color: transparent;
+	border-radius: 4px;
+}
+
+#beer-brewery.selected {
+	background: rgba(0,0,0,0.4);
+}
+
+#beer-brewery img {
+	vertical-align: middle;
+}
+
+#beer-location {
+	font-size: 14px;
+}
+#beer-style, #user-bio {
+	font-size: 14px;
+}
+
+.beer-stat {
+	width: 23%;
+	float: left;
+	margin: 3px;
+	background: rgba(255,255,255,0.6);
+	border-radius: 5px;
+}
+.beer-stat-title {
+	font-size: 13px;
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+}
+.beer-stat-num {
+	font-size: 13px;
+	width: 100%;
+	text-align: center;
+}
+
+.simple-box {
+	background-color: #efd7aa;
+	border: 4px solid #261402;
+	border-radius: 10px;
+	-webkit-background-clip: padding-box;
+	color: #322814;
+	padding: 4px;
+	width: 285px;
+	margin: 0 auto;
+}
+.comment-box {
+	background-color: #efd7aa;
+	border: 2px solid #261402;
+	border-radius: 10px;
+	-webkit-background-clip: padding-box;
+	color: #322814;
+	padding: 4px;
+	margin: 0 auto;
+	font-size: 16px;
+}
+
+.chkLabel {
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+.share-button {
+	width: 35px;
+	height: 35px;
+	display: block;
+	float: right;
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+.share-button.fbook {
+	background-image: url(../images/share-fbook.png);
+}
+.share-button.fbook.pressed {
+	background-position: left -35px;
+}
+
+.share-button.twit {
+	background-image: url(../images/share-twit.png);
+	margin-right: 10px;
+}
+.share-button.twit.pressed {
+	background-position: left -35px;
+}
+
+.share-button.foursquare {
+	background-image: url(../images/share-foursquare.png);
+	margin-right: 10px;
+}
+.share-button.foursquare.pressed {
+	background-position: left -35px;
+}
+
+.share-button.gowalla {
+	background-image: url(../images/share-gowalla.png);
+	margin-right: 10px;
+}
+.share-button.gowalla.pressed {
+	background-position: left -35px;
+}
+
+#accuracy {
+	font-size: 14px;
+	height: 17px;
+	margin-bottom: 3px;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+.venue-category {
+	width: 32px;
+	float: left;
+	padding-right: 3px;
+}
+.venue-info-wrap {
+	width: 260px;
+	padding-right: 5px;
+	float: left;
+	padding-bottom: 5px;
+	padding-left: 3px;
+}
+.venue-name {
+	color: #9e7f44;
+	font-size: 16px;
+	font-weight: bold;
+}
+.venue-address {
+	font-size: 14px;
+	color: #9b4d08;
+	height: 18px;
+}
+.venue-footer {
+	color: #9b4d08;
+	font-size: 12px;
+}
+
+.growl-divider {
+	height: 25px;
+	width: 100%;
+	color: #fff;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 25px;
+	padding-left: 5px;
+	text-align: left;
+/*	background: url(../images/divider-bg.png);*/
+	background: #261402;
+	border-bottom: 1px solid #130a01;
+	border-top: 1px solid #432404;
+}
+
+
+.palm-scrim {
+  background: url(../images/scrim.png) fixed 0 0 repeat-x !important;
+}
+
+
+		.snowflake {
+			position: absolute;
+			text-align: center;
+			z-index: 9999;
+			top: -100px;
+			width: 1em;
+			height: 1em;
+			color: white;
+			font-size: 16px;
+			text-shadow: rgba(0, 0, 0, 0.7) 1px 1px 2px;
+			/* We use the following properties to apply the fade and drop animations to each snowflake.
+			   Each of these properties takes two values. These values respectively match a setting
+			   for fade and drop.
+			*/
+			-webkit-animation-iteration-count: infinite, 20;
+			-webkit-animation-direction: normal, normal;
+			-webkit-animation-timing-function: linear, ease-in;
+		}
+ 
+		.snowflake span {
+			position: absolute;
+			display: block;
+			width: 1em;
+			height: 1em;
+			/* We use the following properties to adjust the clockwiseSpin or counterclockwiseSpin
+			   animations on each snowflake.
+			   The createASnowflake function determines whether a flake has the 
+			   clockwiseSpin or counterclockwiseSpin animation.
+			*/
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-direction: alternate;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-transform-origin: 50% -100%;
+ 
+		}
+ 
+		.snowflake.tiny {
+			font-size: 0.5em;
+		}
+		
+		.snowflake.tiny img {
+			width: 16px;
+			height: 16px;
+		}
+ 
+		.snowflake.small {
+			font-size: 1em;
+		}
+		.snowflake.small img {
+			width: 24px;
+			height: 24px;
+		}
+ 
+		.snowflake.medium {
+			font-size: 2em;
+		}
+		.snowflake.medium img {
+			width: 32px;
+			height: 32px;
+		}
+ 
+		.snowflake.large {
+			font-size: 3em;
+		}
+		.snowflake.large img {
+			width: 48px;
+			height: 48px;
+		}
+ 
+		.snowflake.massive {
+			font-size: 7em;
+		}
+		.snowflake.massive img {
+			width: 64px;
+			height: 64px;
+		}
+ 
+		/* Hides a snowflake towards the very end of the animation */
+		@-webkit-keyframes fade {
+			/* Show a snowflake while into or below 85 percent of the animation and hide it, otherwise */
+			0%   { opacity: 1; }
+			85%  { opacity: 1; }
+			100% { opacity: 0; }
+		}
+ 
+		/* Makes a snowflake fall from -50px to 650px pixels in the y-axis */
+		@-webkit-keyframes drop {
+			0%   { -webkit-transform: translate(0px, 500px); }
+			100% { -webkit-transform: translate(0px, 75px); }
+		}
+ 
+		/* Rotates a snowflake from -50 to 50 degrees in 2D space */
+		@-webkit-keyframes clockwiseSpin {
+			0%   { -webkit-transform: rotate(-50deg); }
+			100% { -webkit-transform: rotate(50deg); }
+		}
+ 
+ 
+		/* Rotates it from 50 to -50 degrees in 2D space */
+		@-webkit-keyframes counterclockwiseSpin  {
+			0%   { -webkit-transform: rotate(50deg); }
+			100% { -webkit-transform: rotate(-50deg); }
+		}
+ 
+ 
+ 
+#checkin-counts {
+	font-size: 16px;
+}
+
+
+#total-checkins {
+	width: 100%;
+	height: 30px;
+	padding-left: 34px;
+	background: url(../images/total-checkins.png) no-repeat left top;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+#unique-beers {
+	width: 100%;
+	height: 30px;
+	padding-left: 34px;
+	background: url(../images/beers-drank.png) no-repeat left top;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+#created-beers {
+	width: 100%;
+	height: 30px;
+	padding-left: 34px;
+	background: url(../images/created-beers.png) no-repeat left top;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+#total-friends {
+	width: 100%;
+	height: 30px;
+	padding-left: 30px;
+	background: url(../images/total-friends.png) no-repeat left top;
+	font-size: 16px;
+}
+
+img.faded {
+	opacity: 0.4;
+}
+
+#beer-average-rating {
+	font-size:13px;
+	width: 49%;
+	float: left;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+#beer-your-rating {
+	font-size: 13px;
+	width: 49%;
+	float: right;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+#brewery-twitter a {
+	color: #c58d40;
+	font-size: 14px;
+}
+
+#no-results {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+}
+
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+
+.left-small {
+	width: 64px;
+}
+
+.right-wide {
+	width: 220px;
+}
+
+#user-name {
+	font-size: 18px;
+}
+#user-city {
+	font-size: 15px;
+	background: url(../images/pin.png) no-repeat left center;
+	padding-left: 17px;
+	height: 16px;
+	line-height: 16px;
+}
+#user-website {
+	font-size: 15px;
+	background: url(../images/globe.png) no-repeat left center;
+	padding-left: 17px;
+	height: 16px;
+	line-height: 16px;
+}
+
+.beer-rating {
+	font-size: 16px;
+}
+
+#toast-this {
+	width: 32px;
+	height: 32px;
+	background: url(../images/toast.png) no-repeat left top;
+	float: right;
+}
+
+#toast-this.untoast {
+	background: url(../images/untoast.png) no-repeat left top !important;
+}
+
+#toast-message {
+	font-size: 16px;
+}
+
+#comments-div {
+	margin-top: 7px;
+}
+
+#comment-area {
+	margin-top: 10px;
+}

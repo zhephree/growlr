@@ -1,0 +1,48 @@
+[
+    {"source": "app/lib/asyncWrappers.js"},
+    {"source": "app/lib/metrix.js"},
+    {"source": "app/assistants/stage-assistant.js"},
+    {"source": "app/lib/globals.js"},
+    {"source": "app/lib/encoding.js"},
+    {"source": "app/lib/numbers.js"},
+    {
+        "scenes": "login",
+        "source": "app/assistants/login-assistant.js"
+    },
+    {
+        "scenes": "beer-search",
+        "source": "app/assistants/beer-search-assistant.js"
+    },
+    {
+        "scenes": "beer-info",
+        "source": "app/assistants/beer-info-assistant.js"
+    },
+    {
+        "scenes": "checkin",
+        "source": "app/assistants/checkin-assistant.js"
+    },
+    {
+        "scenes": "venue-search",
+        "source": "app/assistants/venue-search-assistant.js"
+    },
+    {
+        "scenes": "checkin-result",
+        "source": "app/assistants/checkin-result-assistant.js"
+    },
+    {
+        "scenes": "user-info",
+        "source": "app/assistants/user-info-assistant.js"
+    },
+    {
+        "scenes": "brewery-info",
+        "source": "app/assistants/brewery-info-assistant.js"
+    },
+    {
+        "scenes": "feed",
+        "source": "app/assistants/feed-assistant.js"
+    },
+    {
+        "scenes": "view-checkin",
+        "source": "app/assistants/view-checkin-assistant.js"
+    }
+]

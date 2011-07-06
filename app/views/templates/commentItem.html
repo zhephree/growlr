@@ -1,0 +1,14 @@
+<div class='result row' x-mojo-tap-highlight='none' style="background: none !important;position: relative;padding:0;padding-top:5px;padding-left: 7px; padding-right: 7px;">
+	<div style="position: relative;">
+		<div class="beer-category">
+			<div class="beer-cat-icon"><img src="#{user.img}" width="32"/></div>
+		</div>
+		<div class="beer-info-wrap#{thin}">
+			<div class="beer-name truncating-text ">#{user.first_name} #{user.last_name}</div>
+			<div class='comment-box' id="address-#{id}">#{text}</div>
+
+			<div class='beer-brewery truncating-text ' style="text-align:right" id="address-#{id}">#{created_atFormatted}</div>
+		</div>
+		<br class="breaker">
+	</div>
+</div>

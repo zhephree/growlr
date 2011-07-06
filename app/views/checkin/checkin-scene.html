@@ -1,0 +1,64 @@
+<!-- TODO: replace the contents of this file with your own html -->
+<div>
+	<div id="checkin-fields">
+		<div class="border-top">CHECK-IN</div>
+		<div class="border-middle">
+			<div class="beer-info-wrapper">
+				<div id="beer-info-left">
+					<img src="" width="48" height="48" id="beer-image">
+				</div>
+				<div id="beer-info-right">
+					<div id="beer-name"></div>
+					<div id="beer-brewery"></div>
+					<div id="beer-location"></div>
+				</div>
+				<br class="breaker">
+			</div>
+			<br>
+			<div class="palm-list">
+		   		<div class="palm-row first">
+					<div class="palm-row-wrapper textfield-group" x-mojo-focus-highlight="true">
+						<div class="title">
+		      				<div x-mojo-element="TextField" id="shout"></div>
+						</div>
+					</div>
+				</div>
+				<div class="palm-row last">
+					<div class="palm-row-wrapper">
+						<div x-mojo-element="Button" id="addLocation"></div>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="border-bottom"></div>
+	</div>
+
+	<div class="simple-box" style="margin-bottom: 4px;">
+			<div class="left chkLabel" style="float: left; width: 130px;">Rating</div>
+			<div class="right" style="float: right; width: 150px; line-height: 25px;">
+				<img src="images/star-bright.png" id="rating1" class="faded" align="middle">
+				<img src="images/star-bright.png" id="rating2" class="faded" align="middle">
+				<img src="images/star-bright.png" id="rating3" class="faded" align="middle">
+				<img src="images/star-bright.png" id="rating4" class="faded" align="middle">
+				<img src="images/star-bright.png" id="rating5" class="faded" align="middle">
+			</div>
+			<br class="breaker"/>
+	</div>
+
+
+	<div class="simple-box">
+			<div class="left chkLabel" style="float: left; width: 110px;">Share with...</div>
+			<div class="right" style="float: right; width: 170px;">
+				<div id="share-facebook" class="share-button fbook"></div>
+				<div id="share-twitter" class="share-button twit"></div>
+				<div id="share-foursquare" class="share-button foursquare" style="display:none;"></div>
+				<div id="share-gowalla" class="share-button gowalla" style="display:none;"></div>
+				<br class="breaker"/>
+			</div>
+			<br class="breaker"/>
+	</div>
+
+	<div x-mojo-element="Button" id="goConfirm" class="growlr-button"></div>
+
+
+</div>

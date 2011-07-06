@@ -1,0 +1,39 @@
+<!-- TODO: replace the contents of this file with your own html -->
+<div class="scene-wrapper">
+	<div id="search-fields">
+		<div class="border-top">CHECK-IN INFO</div>
+		<div class="border-middle">
+			<div class="float-left left-small" id="user-photo"></div>
+			<div class="float-right right-wide">
+				<div id="user-name"></div>
+				<div id="user-city"></div>
+				<div id="user-website"></div>
+			</div>
+			<br class="breaker">
+			<div id="checkin-info"></div>
+		</div>
+		<div class="border-bottom"></div>
+	</div>
+	
+	<div class="simple-box">
+		<div class="brewery-name float-left right-wide" id="toast-message"></div>
+		<div id="toast-this"></div>
+		<br class="breaker">
+	</div>
+
+	<div class="growl-divider" id="comments-div">Comments</div>
+	<div id="comments-list" x-mojo-element="List" ></div>
+	
+	<div id="comment-area">
+		<div class="palm-list">
+	   		<div class="palm-row single">
+				<div class="palm-row-wrapper textfield-group" x-mojo-focus-highlight="true">
+					<div class="title">
+	      				<div x-mojo-element="TextField" id="comment"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div x-mojo-element="Button" id="goComment" class="growlr-button"></div>
+	</div>
+</div>

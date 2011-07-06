@@ -1,0 +1,10 @@
+{
+	"id": "com.zhephree.growlr",
+	"version": "0.7.0",
+	"vendor": "Zhephree",
+	"type": "web",
+	"main": "index.html",
+	"title": "growlr",
+	"icon": "icon-64.png",
+	"uiRevision":2
+}
