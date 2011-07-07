@@ -27,6 +27,15 @@ ViewCheckinAssistant.prototype.setup = function() {
 
 	this.commentTappedBound=this.commentTapped.bind(this);
 	Mojo.Event.listen(this.controller.get("goComment"),Mojo.Event.tap,this.commentTappedBound);
+	
+	 if(GROWLR.isTouchPad()){
+    this.controller.get("goComment").addClassName("touchpad");
+  }
+
+	
+		var setupMenu=GROWLR.setupMenu.bind(this);
+		setupMenu('',GROWLR.isTouchPad());
+
 };
 
 ViewCheckinAssistant.prototype.fixDate = function(value,model) {

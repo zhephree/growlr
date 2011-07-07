@@ -603,3 +603,13 @@ img.faded {
 #comment-area {
 	margin-top: 10px;
 }
+
+
+
+#goCheckin.touchpad,
+#goComment.touchpad,
+#goConfirm.touchpad,
+#goWishlist.touchpad {
+  width: 45% !important;
+  margin: 8px auto !important;
+}

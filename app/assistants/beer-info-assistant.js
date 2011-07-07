@@ -4,6 +4,8 @@ function BeerInfoAssistant(p) {
 }
 
 BeerInfoAssistant.prototype.setup = function() {
+
+
 	this.controller.setupWidget('goCheckin', this.attributes = {}, this.loginBtnModel = {label:'Check-in to this Brew', disabled:false});
 	this.onCheckinTappedBound=this.onCheckinTapped.bind(this);
 	Mojo.Event.listen(this.controller.get("goCheckin"), Mojo.Event.tap, this.onCheckinTappedBound);
@@ -29,6 +31,13 @@ BeerInfoAssistant.prototype.setup = function() {
 		ignoreErrors: false,
 		debug: true
 	});
+	
+ if(GROWLR.isTouchPad()){
+    this.controller.get("goCheckin").addClassName("touchpad");
+    this.controller.get("goWishlist").addClassName("touchpad");
+  }
+		var setupMenu=GROWLR.setupMenu.bind(this);
+		setupMenu('',GROWLR.isTouchPad());
 };
 
 BeerInfoAssistant.prototype.infoSuccess = function(r) {

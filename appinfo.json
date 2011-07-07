@@ -1,6 +1,6 @@
 {
 	"id": "com.zhephree.growlr",
-	"version": "0.7.0",
+	"version": "0.7.5",
 	"vendor": "Zhephree",
 	"type": "web",
 	"main": "index.html",

@@ -6,7 +6,14 @@ function BeerSearchAssistant() {
 }
 
 BeerSearchAssistant.prototype.setup = function() {
-	this.controller.setupWidget('q', this.attributes = {hintText:'Beer Name...',textCase: Mojo.Widget.steModeLowerCase}, this.qModel = {value:'', disabled:false});
+  if(GROWLR.isTouchPad()){
+  	this.controller.setupWidget('q', this.attributes = {hintText:'Beer Name...',textCase: Mojo.Widget.steModeLowerCase}, this.qModel = {value:'', disabled:false,autoFocus:false});
+
+  }else{
+  	this.controller.setupWidget('q', this.attributes = {hintText:'Beer Name...',textCase: Mojo.Widget.steModeLowerCase}, this.qModel = {value:'', disabled:false});
+  
+  }
+
 
 	this.controller.setupWidget('goSearch', this.attributes = {type:Mojo.Widget.activityButton}, this.loginBtnModel = {label:'Search', disabled:false});
 

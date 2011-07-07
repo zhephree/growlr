@@ -25,6 +25,9 @@ BreweryInfoAssistant.prototype.setup = function() {
 		ignoreErrors: false,
 		debug: true
 	});
+		var setupMenu=GROWLR.setupMenu.bind(this);
+		setupMenu('',GROWLR.isTouchPad());
+
 };
 
 BreweryInfoAssistant.prototype.listTapped = function(event){

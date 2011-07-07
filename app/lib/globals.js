@@ -21,6 +21,7 @@ GROWLR.relativeTime = function(offset){
 };
 
 GROWLR.isTouchPad=function(){
+  Mojo.Log.error(Object.toJSON(Mojo.Environment.DeviceInfo));
 	if(Mojo.Environment.DeviceInfo.modelNameAscii.indexOf("ouch")>-1){
 		return true;
 	}
@@ -349,53 +350,45 @@ function removeElement(parentDiv, childDiv,doc){
 }
 
 
-GROWLR.setupMenu=function(currentScene){
-	if(GROWLR.isTouchPad){
-	    var menuModel = {
-	        visible: true,
-	        items: [ 
-	        	{items: [
-	        		{},
-		            { icon: "back", command: Mojo.Event.back},
-		            { iconPath: "images/menu/beer.png", command: "goBeer"},
-		            { iconPath: 'images/menu/friends.png', command: 'goFeed'},
-		            { iconPath: 'images/menu/profile.png', command: 'goProfile'},
-		            {}
-		         ],
-		         toggleCmd: currentScene
-		       }
-	        ]
-	    }
-	
-	}else{
-	    var menuModel = {
-	        visible: true,
-	        items: [ 
-	        	{items: [
-	        		{},
-		            { iconPath: "images/menu/beer.png", command: "goBeer"},
-		            { iconPath: 'images/menu/friends.png', command: 'goFeed'},
-		            { iconPath: 'images/menu/profile.png', command: 'goProfile'},
-		            {}
-		         ],
-		         toggleCmd: currentScene
-		       }
-	        ]
-	    }
-	
-	
-	}
+GROWLR.setupMenu=function(currentScene,backOnly){
+  if(backOnly==true){
+  	    var menuModel = {
+  	        visible: true,
+  	        items: [ 
+ 		            { icon: "back", command: "goBack"}
+  	        ]
+  	    } ;   
+  }else{
+  	    var menuModel = {
+  	        visible: true,
+  	        items: [ 
+  	        	{items: [
+  	        		{},
+  		            { iconPath: "images/menu/beer.png", command: "goBeer"},
+  		            { iconPath: 'images/menu/friends.png', command: 'goFeed'},
+  		            { iconPath: 'images/menu/profile.png', command: 'goProfile'},
+  		            {}
+  		         ],
+  		         toggleCmd: currentScene
+  		       }
+  	        ]
+  	    };
+  	
+  
+  }
 
-	this.controller.setupWidget(Mojo.Menu.commandMenu,
-	    this.attributes = {
-	        spacerHeight: 0,
-	        menuClass: 'no-fade'
-	    },
-		menuModel
-	);
-	
-	GROWLR.currentScene=currentScene;
-	
+  if(currentScene!='' || backOnly==true){
+  	this.controller.setupWidget(Mojo.Menu.commandMenu,
+  	    this.attributes = {
+  	        spacerHeight: 0,
+  	        menuClass: 'no-fade'
+  	    },
+  		menuModel
+  	);
+  	
+  	GROWLR.currentScene=currentScene;
+  }
+  	
 	this.handleCommand = GROWLR.handleCommand.bind(this);
 };
 
@@ -417,6 +410,9 @@ GROWLR.handleCommand = function(event){
     				this.controller.stageController.swapScene({name: 'feed', transition: Mojo.Transition.crossFade});
     			}
     			break;
+    		case 'goBack':
+    		  this.controller.stageController.popScene();
+    		  break;
     	}
     }
 };

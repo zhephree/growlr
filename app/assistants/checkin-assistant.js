@@ -44,6 +44,12 @@ CheckinAssistant.prototype.setup = function() {
 	this.controller.get("beer-brewery").innerHTML=this.beer.brewery_name;
 	this.controller.get("beer-image").src=this.beer.beer_stamp;
 
+ if(GROWLR.isTouchPad()){
+    this.controller.get("goConfirm").addClassName("touchpad");
+    
+  }
+		var setupMenu=GROWLR.setupMenu.bind(this);
+		setupMenu('',GROWLR.isTouchPad());
 };
 
 CheckinAssistant.prototype.setRating = function(rating) {

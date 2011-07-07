@@ -23,6 +23,9 @@ FeedAssistant.prototype.setup = function() {
 
 	this.onListTappedBound=this.onListTapped.bind(this);
 	Mojo.Event.listen(this.controller.get("feed-list"), Mojo.Event.listTap, this.onListTappedBound);
+	
+	this.onRecentTappedBound=this.onRecentTapped.bind(this);
+	Mojo.Event.listen(this.controller.get("most-recent"), Mojo.Event.tap, this.onRecentTappedBound);
 
 	untappdGet(this,{
 		endpoint: 'feed',
@@ -48,13 +51,13 @@ FeedAssistant.prototype.setup = function() {
 FeedAssistant.prototype.userFeedSuccess = function(r) {
 	var j=r.responseJSON.results;
 	
-	var mostrecent=j[0];
+	this.mostrecent=j[0];
 	
-	mostrecent.venue_nameFormatted=this.fixVenue(mostrecent.venue_name);
-	mostrecent.created_atFormatted=this.fixDate(mostrecent.created_at);
-	mostrecent.thin="-thin";
+	this.mostrecent.venue_nameFormatted=this.fixVenue(this.mostrecent.venue_name);
+	this.mostrecent.created_atFormatted=this.fixDate(this.mostrecent.created_at);
+	this.mostrecent.thin="-thin";
 	
-	this.controller.get("most-recent").update(Mojo.View.render({object: mostrecent, template:'templates/feedItems'}));
+	this.controller.get("most-recent").update(Mojo.View.render({object: this.mostrecent, template:'templates/feedItems'}));
 };
 
 FeedAssistant.prototype.feedSuccess = function(r) {
@@ -107,6 +110,10 @@ FeedAssistant.prototype.onLoadTapped = function(r) {
 
 FeedAssistant.prototype.onListTapped = function(event) {
 	this.controller.stageController.pushScene("view-checkin",{checkin: event.item});
+};
+
+FeedAssistant.prototype.onRecentTapped = function(event) {
+	this.controller.stageController.pushScene("view-checkin",{checkin: this.mostrecent});
 };
 
 FeedAssistant.prototype.fixVenue = function(value,model) {

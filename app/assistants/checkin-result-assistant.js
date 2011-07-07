@@ -40,6 +40,10 @@ CheckinResultAssistant.prototype.setup = function() {
 					      this.resultsModel);
 	this.listTappedBound=this.listTapped.bind(this);
 	Mojo.Event.listen(this.controller.get("beer-list"), Mojo.Event.listTap, this.listTappedBound);
+	
+		var setupMenu=GROWLR.setupMenu.bind(this);
+		setupMenu('',GROWLR.isTouchPad());
+
 
 
 	//handle any foursquare data
