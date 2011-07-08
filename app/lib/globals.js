@@ -21,6 +21,7 @@ GROWLR.relativeTime = function(offset){
 };
 
 GROWLR.isTouchPad=function(){
+
   Mojo.Log.error(Object.toJSON(Mojo.Environment.DeviceInfo));
 	if(Mojo.Environment.DeviceInfo.modelNameAscii.indexOf("ouch")>-1){
 		return true;
